@@ -1,0 +1,20 @@
+{
+  "id": "pineapple",
+  "name": "Pineapple",
+  "price": 2.99,
+  "description": "Many studies have suggested that increasing consumption of plant foods like pineapples decreases the risk of obesity, overall mortality, diabetes, and heart disease.",
+  "stock": 12,
+  "img": "./api/products/pineapple/pineapple-modal.png",
+  "reviews": [
+    {
+      "name": "Jhonny Cash",
+      "stars": 5,
+      "description": "Very tasty, no doubt"
+    },
+    {
+      "name": "Fábio Talarico",
+      "stars": 4,
+      "description": "Ok, I like it"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "banana",
+  "name": "Banana",
+  "price": 3.99,
+  "description": "The banana is grown in the tropics, and, though it is most widely consumed in those regions, it is valued worldwide for its flavour, nutritional value, and availability throughout the year.",
+  "stock": 10,
+  "img": "./api/products/banana/banana-modal.png",
+  "reviews": [
+    {
+      "name": "Rogerinho",
+      "stars": 4,
+      "description": "Overripe banana."
+    },
+    {
+      "name": "xXReiDelas2021Xx",
+      "stars": 5,
+      "description": "Too good, always liked."
+    }
+  ]
+}

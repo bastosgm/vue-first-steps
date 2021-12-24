@@ -1,0 +1,20 @@
+{
+  "id": "orange",
+  "name": "Orange",
+  "price": 1.99,
+  "description": "Round orange fruit, consumed mainly in winter. Its flesh is also orange and is formed by small bags full of juice. The orange is used for consumption in fresh and for the industry, mainly in juice.",
+  "stock": 2,
+  "img": "./api/products/orange/orange-modal.png",
+  "reviews": [
+    {
+      "name": "Lucas Lucco (Yes, that's him!)",
+      "stars": 5,
+      "description": "It's always on my diets."
+    },
+    {
+      "name": "Kleber Bambam",
+      "stars": 5,
+      "description": "It's always on my diets as well, brrr."
+    }
+  ]
+}

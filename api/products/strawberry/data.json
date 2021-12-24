@@ -1,0 +1,20 @@
+{
+  "id": "strawberry",
+  "name": "Strawberry",
+  "price": 7.99,
+  "description": "The strawberry is a succulent and fragrant fruit of bright red colour, obtained from the plant with the same name. In the West it is considered as the 'queen of the fruit'. It is eaten raw and used to make jam, stewed fruit... It is also used with medicinal purposes, since it has excellent benefits for health.",
+  "stock": 7,
+  "img": "./api/products/strawberry/strawberry-modal.png",
+  "reviews": [
+    {
+      "name": "Irineu Famoso",
+      "stars": 5,
+      "description": "It's so delicious."
+    },
+    {
+      "name": "Nathália Vencedora",
+      "stars": 3,
+      "description": "A little sour."
+    }
+  ]
+}

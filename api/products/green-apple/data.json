@@ -1,0 +1,20 @@
+{
+  "id": "green-apple",
+  "name": "Green-apple",
+  "price": 8.99,
+  "description": "The flavor of Green apples is extremely acidic, sometimes to the point of not having other taste, but generally refreshing.",
+  "stock": 3,
+  "img": "./api/products/green-apple/green-apple-modal.png",
+  "reviews": [
+    {
+      "name": "DJ Deolane Bezerra",
+      "stars": 5,
+      "description": "I usually eat one or twelve before my shows."
+    },
+    {
+      "name": "A dead man",
+      "stars": 1,
+      "description": "I ate and died."
+    }
+  ]
+}

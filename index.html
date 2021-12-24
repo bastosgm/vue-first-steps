@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./vue.min.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Feira_do_ZÉ!</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h3 style="color: #fff;">Feira_do_<span style="color: yellow;">ZÉ!</span></h3>
+      <div class="cart_menu" @click="cartActive = true">{{cartTotal | priceConvert}} | {{cart.length}}</div>
+    </header>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products">
+      <div v-for="product in products" @click="showModal(product.id)" :key="product.id" class="product">
+        <img :src="product.img" :alt="product.name" class="product_img" />
+        <div class="produto_info">
+          <!-- pipe(|) used to apply filters -->
+          <span class="product_price">{{product.price | priceConvert}}</span>
+          <h2 class="product_title">{{product.name}}</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL SECTION -->
+    <section class="modal" v-if="product" @click="hideModal">
+      <div class="modal_container">
+        <div class="modal_img">
+          <img :src="product.img" :alt="product.name"></img>
+        </div>
+        <button @click="product = false" class="modal_hide">X</button>
+        <div class="modal_data">
+          <span class="modal_preco">{{product.price | priceConvert }}</span>
+          <h2 class="modal_title">{{product.name}}</h2>
+          <p>{{product.description}}</p>
+          <button v-if="product.stock > 0" @click="addItem" class="modal_btn">Add to Cart</button>
+          <button v-else="" class="modal_btn2" disabled>Sold Out :(</button>
+        </div>
+        <div class="reviews">
+          <h2 class="reviews_subtitle">Reviews</h2>
+          <ul>
+            <li v-for="review in product.reviews" class="review">
+              <p class="avaliacao_inscricao">{{review.description}}</p>
+              <p class="review_user">{{review.name}} | {{review.stars}} stars</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART MODAL SECTION -->
+    <section class="cart_modal" :class="{active: cartActive}" @click="clickOutsideCart">
+      <div class="cart_container">
+        <button class="cart_hide" @click="cartActive = false">X</button>
+
+        <h2 class="cart_title">My Cart</h2>
+        <!-- if cart doesn't empty... -->
+        <div v-if="cart.length > 0">
+          <ul class="carrinho_lista">
+            <li v-for="(item, index) in cart" class="cart_item">
+              <p>{{item.name}}</p>
+              <p class="cart_price">{{item.price | priceConvert}}</p>
+              <button class="cart_sub" @click="subItem(index)">X</button>
+            </li>
+          </ul>
+          <p class="cart_total"><strong>{{cartTotal | priceConvert}}</strong></p>
+          <button class="cart_finish">Buy Now</button>
+        </div>
+        <!-- if cart is empty... -->
+        <p v-else>Your cart is empty :(</p>
+      </div>
+    </section>
+
+    <div class="alert" :class="{active: alertActive}">
+      <p class="alert_message">{{messageAlert}}</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <p>Feira_do_ZÉ!</p>
+      <p>© Gustavo Bastos - 2021</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

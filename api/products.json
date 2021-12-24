@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "price": 2.99,
+    "img": "./api/products/pineapple/pineapple.png"
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "price": 7.99,
+    "img": "./api/products/strawberry/strawberry.png"
+  },
+  {
+    "id": "orange",
+    "name": "Orange",
+    "price": 1.99,
+    "img": "./api/products/orange/orange.png"
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "price": 3.99,
+    "img": "./api/products/banana/banana.png"
+  },
+  {
+    "id": "green-apple",
+    "name": "Green-apple",
+    "price": 8.99,
+    "img": "./api/products/green-apple/green-apple.png"
+  }
+]
